@@ -13,7 +13,8 @@ class GFItemInfoViewController: UIViewController {
     let stackView = UIStackView()
     let itemInfoViewOne = GFItemInfoView()
     let itemInfoViewTwo = GFItemInfoView()
-    let actionButton = GFButton()
+    let actionButton = GFButton(type: .system)
+    
     var user: User!
     
     init(user: User) {
@@ -25,6 +26,8 @@ class GFItemInfoViewController: UIViewController {
         super.viewDidLoad()
         
         configureViewController()
+        configureStackView()
+        configureActionButton()
         layoutUI()
     }
 
@@ -41,9 +44,14 @@ class GFItemInfoViewController: UIViewController {
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
     
+    fileprivate func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTapped() {}
+    
     fileprivate func layoutUI() {
-        view.addSubview(stackView)
-        view.addSubview(actionButton)
+        view.addSubviews(stackView, actionButton)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20

@@ -8,14 +8,71 @@
 
 import UIKit
 
+enum ItemInfoType {
+    case repos, gists, followers, following
+}
+
 class GFItemInfoView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    let symbolImageView = UIImageView()
+    let titleLabel = GFTitleLabel(textAlignment: .left, fontSize: 14)
+    let countLabel = GFTitleLabel(textAlignment: .center, fontSize: 14)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        configure()
     }
-    */
+    
+    fileprivate func configure() {
+        addSubviews(symbolImageView, titleLabel, countLabel)
+        
+        symbolImageView.translatesAutoresizingMaskIntoConstraints = false
+        symbolImageView.contentMode = .scaleAspectFill
+        symbolImageView.tintColor = .label
+        
+        let imageViewHeight: CGFloat = 20
+        NSLayoutConstraint.activate([
+            symbolImageView.topAnchor.constraint(equalTo: topAnchor),
+            symbolImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            symbolImageView.widthAnchor.constraint(equalToConstant: imageViewHeight),
+            symbolImageView.heightAnchor.constraint(equalToConstant: imageViewHeight),
+            
+            titleLabel.centerYAnchor.constraint(equalTo: symbolImageView.centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: symbolImageView.trailingAnchor, constant: 12),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleLabel.heightAnchor.constraint(equalToConstant: 18),
+            
+            countLabel.topAnchor.constraint(equalTo: symbolImageView.bottomAnchor, constant: 4),
+            countLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            countLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            countLabel.heightAnchor.constraint(equalToConstant: 18)
+        ])
+    }
+    
+    func set(itemInfoType: ItemInfoType, withCount count: Int) {
+        switch itemInfoType {
+        case .repos:
+            symbolImageView.image = SFSymbols.repos
+            titleLabel.text = "Public Repos"
+        
+        case .gists:
+            symbolImageView.image = SFSymbols.gists
+            titleLabel.text = "Public Gists"
+            
+        case .followers:
+            symbolImageView.image = SFSymbols.followers
+            titleLabel.text = "Followers"
 
+        case .following:
+            symbolImageView.image = SFSymbols.following
+            titleLabel.text = "Following"
+        }
+        
+        countLabel.text = String(count)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

@@ -6,4 +6,17 @@
 //  Copyright © 2020 Shihchiao Chao. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UITableView {
+    
+    func reloadDataOnMainThread() {
+        DispatchQueue.main.async {
+            self.reloadData()
+        }
+    }
+    
+    func removeExcessCells() {
+        tableFooterView = UIView(frame: .zero)
+    }
+}
