@@ -2,10 +2,10 @@
 You can search anyone with a github username to see one's followers, and checck on one's user detail page.
  
 ## Screenshots
-<img src="GHPreviewAssets/GHF-Search.gif" width=200 align=left>
-<img src="GHPreviewAssets/GHF-SearchWithNoFollower.gif" width=200 align=left>
-<img src="GHPreviewAssets/GHF-UserInfo.gif" width=200 align=left>
-<img src="GHPreviewAssets/GHF-Favorites(add).gif" width=200>
+<img src="GHPreviewAssets/GHF-Search.gif" width=180 align=left>
+<img src="GHPreviewAssets/GHF-SearchWithNoFollower.gif" width=180 align=left>
+<img src="GHPreviewAssets/GHF-UserInfo.gif" width=180 align=left>
+<img src="GHPreviewAssets/GHF-Favorites(add).gif" width=180>
 
 
 ## Flow(what Github Follwers will do)
