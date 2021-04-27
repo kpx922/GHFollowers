@@ -8,7 +8,7 @@ You can search anyone with a github username to see one's followers, and checck 
 <img src="GHPreviewAssets/GHF-Favorites(add).gif" width=200>
 
 
-### Flow(what Github Follwers will do)
+## Flow(what Github Follwers will do)
   1. search a github user and display his/her all followers
   2. show the follower's detail infomation:
       - username, name, location, bio
