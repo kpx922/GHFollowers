@@ -11,18 +11,10 @@ A profile project
       - user can add(store) their own favorite after searched
       - user can also delete them from favorites :(
       
-### Demo
-###### 1. Search for particular github user
-![](GHPreviewAssets/GHF-Search.gif)
-
-###### 2. When search result has no follower ;(
-![](GHPreviewAssets/GHF-SearchWithNoFollower.gif)
-
-###### 3. User's personal infomation
-![](GHPreviewAssets/GHF-UserInfo.gif)
-
-###### 4. Add as your favorite user
-![](GHPreviewAssets/GHF-Favorites(add).gif)
-
-###### 5. Delete them from personal favorites
-![](GHPreviewAssets/GHF-Favorites(delete).gif)
+      
+### Screenshots
+<img src="GHPreviewAssets/GHF-Search.gif" width=200 align=left>
+<img src="GHPreviewAssets/GHF-SearchWithNoFollower.gif" width=200 align=left>
+<img src="GHPreviewAssets/GHF-UserInfo.gif" width=200 align=left>
+<img src="GHPreviewAssets/GHF-Favorites(add).gif" width=200>
+<img src="GHPreviewAssets/GHF-Favorites(delete).gif" width=200>
