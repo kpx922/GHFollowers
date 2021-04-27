@@ -18,7 +18,7 @@ You can search anyone with a github username to see one's followers, and checck 
       - user can add(store) their own favorite after searched
       - user can also delete them from favorites :(
 
-### Tech
+## Tech
 #### MVC
   - Basic MVC design to separate view and viewContorller
   
