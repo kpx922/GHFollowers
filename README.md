@@ -27,3 +27,8 @@ You can search anyone with a github username to see one's followers, and checck 
   
 #### Search
   - Use UISearchController combine with NSDiffableDataSourceSnapshot to achieve a smooth animation search expirence.
+
+
+## Credit
+Project based on Sean Allen's iOS Dev Practice course:
+ - https://seanallen.teachable.com/p/take-home
