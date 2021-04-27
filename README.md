@@ -17,4 +17,3 @@ A profile project
 <img src="GHPreviewAssets/GHF-SearchWithNoFollower.gif" width=200 align=left>
 <img src="GHPreviewAssets/GHF-UserInfo.gif" width=200 align=left>
 <img src="GHPreviewAssets/GHF-Favorites(add).gif" width=200>
-<img src="GHPreviewAssets/GHF-Favorites(delete).gif" width=200>
